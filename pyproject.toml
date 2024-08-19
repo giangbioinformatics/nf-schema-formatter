@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=42", "wheel", "setuptools_scm[toml]>=6.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nf-utils"
+dynamic = ["version"]
+description = "nf-utils, build great utilities for Nextflow. Easy to write and execute workflow. Based on the standard of workflow management concept."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [
+    {name = "Thanh-Giang Tan Nguyen", email = "nttg8100@gmail.com"},
+]
+dependencies = [
+  "typer[all]>=0.6",
+]
+
+[project.optional-dependencies]
+test = [
+  "pytest",
+  "pytest-cov",
+]
+dev = [
+  "black",
+  "isort",
+  "flake8",
+  "mypy",
+]
+
+[project.urls]
+homepage = "https://github.com/giangbioinformatics/nf-utils"
+repository = "https://github.com/giangbioinformatics/nf-utils"
+
+[project.scripts]
+nf-utils = "nf_utils.main:app"
+
+[tool.setuptools_scm]
+version_scheme = "post-release"
+local_scheme = "dirty-tag"
+write_to = "nf_utils/_version.py"

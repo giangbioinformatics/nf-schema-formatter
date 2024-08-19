@@ -1,0 +1,527 @@
+{
+    "input": {
+        "type": "string",
+        "required": "true"
+    },
+    "input_fasta": {
+        "type": "string",
+        "required": "true"
+    },
+    "input_folder": {
+        "type": "string",
+        "required": "true"
+    },
+    "multiregion": {
+        "type": "string",
+        "required": "true"
+    },
+    "extension": {
+        "default": "/*_R{1,2}_001.fastq.gz"
+    },
+    "pacbio": {
+        "type": "boolean",
+        "default": false
+    },
+    "iontorrent": {
+        "type": "boolean",
+        "default": false
+    },
+    "FW_primer": {
+        "type": "string",
+        "required": "true"
+    },
+    "RV_primer": {
+        "type": "string",
+        "required": "true"
+    },
+    "classifier": {
+        "type": "string",
+        "required": "true"
+    },
+    "metadata": {
+        "type": "string",
+        "required": "true"
+    },
+    "save_intermediates": {
+        "type": "boolean",
+        "default": false
+    },
+    "trunc_qmin": {
+        "type": "int",
+        "default": 25
+    },
+    "trunc_rmin": {
+        "type": "float",
+        "default": 0.75
+    },
+    "trunclenf": {
+        "type": "string",
+        "required": "true"
+    },
+    "trunclenr": {
+        "type": "string",
+        "required": "true"
+    },
+    "max_ee": {
+        "type": "int",
+        "default": 2
+    },
+    "max_len": {
+        "type": "string",
+        "required": "true"
+    },
+    "ignore_failed_filtering": {
+        "type": "boolean",
+        "default": false
+    },
+    "min_len": {
+        "type": "int",
+        "default": 50
+    },
+    "metadata_category": {
+        "type": "string",
+        "required": "true"
+    },
+    "metadata_category_barplot": {
+        "type": "string",
+        "required": "true"
+    },
+    "double_primer": {
+        "type": "boolean",
+        "default": false
+    },
+    "retain_untrimmed": {
+        "type": "boolean",
+        "default": false
+    },
+    "cutadapt_min_overlap": {
+        "type": "int",
+        "default": 3
+    },
+    "cutadapt_max_error_rate": {
+        "type": "float",
+        "default": 0.1
+    },
+    "exclude_taxa": {
+        "default": "mitochondria,chloroplast"
+    },
+    "min_frequency": {
+        "type": "int",
+        "default": 1
+    },
+    "min_samples": {
+        "type": "int",
+        "default": 1
+    },
+    "multiple_sequencing_runs": {
+        "type": "boolean",
+        "default": false
+    },
+    "single_end": {
+        "type": "boolean",
+        "default": false
+    },
+    "sample_inference": {
+        "default": "independent"
+    },
+    "illumina_novaseq": {
+        "type": "boolean",
+        "default": false
+    },
+    "illumina_pe_its": {
+        "type": "boolean",
+        "default": false
+    },
+    "concatenate_reads": {
+        "type": "boolean",
+        "default": false
+    },
+    "cut_its": {
+        "default": "none"
+    },
+    "its_partial": {
+        "type": "int",
+        "default": 0
+    },
+    "picrust": {
+        "type": "boolean",
+        "default": false
+    },
+    "sbdiexport": {
+        "type": "boolean",
+        "default": false
+    },
+    "addsh": {
+        "type": "boolean",
+        "default": false
+    },
+    "tax_agglom_min": {
+        "type": "int",
+        "default": 2
+    },
+    "tax_agglom_max": {
+        "type": "int",
+        "default": 6
+    },
+    "min_read_counts": {
+        "type": "int",
+        "default": 1
+    },
+    "ignore_failed_trimming": {
+        "type": "boolean",
+        "default": false
+    },
+    "ignore_empty_input_files": {
+        "type": "boolean",
+        "default": false
+    },
+    "qiime_adonis_formula": {
+        "type": "string",
+        "required": "true"
+    },
+    "seed": {
+        "type": "int",
+        "default": 100
+    },
+    "filter_ssu": {
+        "type": "string",
+        "required": "true"
+    },
+    "min_len_asv": {
+        "type": "string",
+        "required": "true"
+    },
+    "max_len_asv": {
+        "type": "string",
+        "required": "true"
+    },
+    "filter_codons": {
+        "type": "string",
+        "required": "true"
+    },
+    "orf_start": {
+        "type": "int",
+        "default": 1
+    },
+    "orf_end": {
+        "type": "string",
+        "required": "true"
+    },
+    "stop_codons": {
+        "default": "TAA,TAG"
+    },
+    "pplace_tree": {
+        "type": "string",
+        "required": "true"
+    },
+    "pplace_aln": {
+        "type": "string",
+        "required": "true"
+    },
+    "pplace_model": {
+        "type": "string",
+        "required": "true"
+    },
+    "pplace_alnmethod": {
+        "default": "hmmer"
+    },
+    "pplace_taxonomy": {
+        "type": "string",
+        "required": "true"
+    },
+    "pplace_name": {
+        "type": "string",
+        "required": "true"
+    },
+    "diversity_rarefaction_depth": {
+        "type": "int",
+        "default": 500
+    },
+    "ancom_sample_min_count": {
+        "type": "int",
+        "default": 1
+    },
+    "vsearch_cluster": {
+        "type": "string",
+        "required": "true"
+    },
+    "vsearch_cluster_id": {
+        "type": "float",
+        "default": 0.97
+    },
+    "ancom": {
+        "type": "boolean",
+        "default": false
+    },
+    "ancombc": {
+        "type": "boolean",
+        "default": false
+    },
+    "ancombc_effect_size": {
+        "type": "int",
+        "default": 1
+    },
+    "ancombc_significance": {
+        "type": "float",
+        "default": 0.05
+    },
+    "ancombc_formula": {
+        "type": "string",
+        "required": "true"
+    },
+    "ancombc_formula_reflvl": {
+        "type": "string",
+        "required": "true"
+    },
+    "report_template": {
+        "default": "${projectDir}/assets/report_template.Rmd"
+    },
+    "report_css": {
+        "default": "${projectDir}/assets/nf-core_style.css"
+    },
+    "report_logo": {
+        "default": "${projectDir}/assets/nf-core-ampliseq_logo_light_long.png"
+    },
+    "report_title": {
+        "default": "Summary of analysis results"
+    },
+    "report_abstract": {
+        "type": "string",
+        "required": "true"
+    },
+    "skip_cutadapt": {
+        "type": "boolean",
+        "default": false
+    },
+    "skip_dada_quality": {
+        "type": "boolean",
+        "default": false
+    },
+    "skip_barrnap": {
+        "type": "boolean",
+        "default": false
+    },
+    "skip_qiime": {
+        "type": "boolean",
+        "default": false
+    },
+    "skip_qiime_downstream": {
+        "type": "boolean",
+        "default": false
+    },
+    "skip_fastqc": {
+        "type": "boolean",
+        "default": false
+    },
+    "skip_alpha_rarefaction": {
+        "type": "boolean",
+        "default": false
+    },
+    "skip_abundance_tables": {
+        "type": "boolean",
+        "default": false
+    },
+    "skip_barplot": {
+        "type": "boolean",
+        "default": false
+    },
+    "skip_taxonomy": {
+        "type": "boolean",
+        "default": false
+    },
+    "skip_dada_taxonomy": {
+        "type": "boolean",
+        "default": false
+    },
+    "skip_dada_addspecies": {
+        "type": "boolean",
+        "default": false
+    },
+    "skip_diversity_indices": {
+        "type": "boolean",
+        "default": false
+    },
+    "skip_multiqc": {
+        "type": "boolean",
+        "default": false
+    },
+    "skip_report": {
+        "type": "boolean",
+        "default": false
+    },
+    "dada_ref_taxonomy": {
+        "default": "silva=138"
+    },
+    "dada_assign_taxlevels": {
+        "type": "string",
+        "required": "true"
+    },
+    "dada_ref_tax_custom": {
+        "type": "string",
+        "required": "true"
+    },
+    "dada_ref_tax_custom_sp": {
+        "type": "string",
+        "required": "true"
+    },
+    "cut_dada_ref_taxonomy": {
+        "type": "boolean",
+        "default": false
+    },
+    "dada_addspecies_allowmultiple": {
+        "type": "boolean",
+        "default": false
+    },
+    "dada_taxonomy_rc": {
+        "type": "boolean",
+        "default": false
+    },
+    "sintax_ref_taxonomy": {
+        "type": "string",
+        "required": "true"
+    },
+    "qiime_ref_taxonomy": {
+        "type": "string",
+        "required": "true"
+    },
+    "qiime_ref_tax_custom": {
+        "type": "string",
+        "required": "true"
+    },
+    "kraken2_ref_taxonomy": {
+        "type": "string",
+        "required": "true"
+    },
+    "kraken2_assign_taxlevels": {
+        "type": "string",
+        "required": "true"
+    },
+    "kraken2_ref_tax_custom": {
+        "type": "string",
+        "required": "true"
+    },
+    "kraken2_confidence": {
+        "type": "float",
+        "default": 0.0
+    },
+    "sidle_ref_taxonomy": {
+        "type": "string",
+        "required": "true"
+    },
+    "sidle_ref_tax_custom": {
+        "type": "string",
+        "required": "true"
+    },
+    "sidle_ref_tree_custom": {
+        "type": "string",
+        "required": "true"
+    },
+    "multiqc_config": {
+        "type": "string",
+        "required": "true"
+    },
+    "multiqc_title": {
+        "type": "string",
+        "required": "true"
+    },
+    "multiqc_logo": {
+        "type": "string",
+        "required": "true"
+    },
+    "max_multiqc_email_size": {
+        "default": "25.MB"
+    },
+    "multiqc_methods_description": {
+        "type": "string",
+        "required": "true"
+    },
+    "outdir": {
+        "type": "string",
+        "required": "true"
+    },
+    "publish_dir_mode": {
+        "default": "copy"
+    },
+    "email": {
+        "type": "string",
+        "required": "true"
+    },
+    "email_on_fail": {
+        "type": "string",
+        "required": "true"
+    },
+    "plaintext_email": {
+        "type": "boolean",
+        "default": false
+    },
+    "monochrome_logs": {
+        "type": "boolean",
+        "default": false
+    },
+    "hook_url": {
+        "type": "string",
+        "required": "true"
+    },
+    "help": {
+        "type": "boolean",
+        "default": false
+    },
+    "version": {
+        "type": "boolean",
+        "default": false
+    },
+    "pipelines_testdata_base_path": {
+        "default": "https://raw.githubusercontent.com/nf-core/test-datasets/"
+    },
+    "config_profile_name": {
+        "type": "string",
+        "required": "true"
+    },
+    "config_profile_description": {
+        "type": "string",
+        "required": "true"
+    },
+    "custom_config_version": {
+        "default": "master"
+    },
+    "custom_config_base": {
+        "default": "https://raw.githubusercontent.com/nf-core/configs/${params.custom_config_version}"
+    },
+    "config_profile_contact": {
+        "type": "string",
+        "required": "true"
+    },
+    "config_profile_url": {
+        "type": "string",
+        "required": "true"
+    },
+    "max_memory": {
+        "default": "128.GB"
+    },
+    "max_cpus": {
+        "type": "int",
+        "default": 16
+    },
+    "max_time": {
+        "default": "240.h"
+    },
+    "validationFailUnrecognisedParams": {
+        "type": "boolean",
+        "default": false
+    },
+    "validationLenientMode": {
+        "type": "boolean",
+        "default": false
+    },
+    "validationSchemaIgnoreParams": {
+        "default": "dada_ref_databases,qiime_ref_databases,sintax_ref_databases,kraken2_ref_databases,sidle_ref_databases,genomes,igenomes_base"
+    },
+    "validationShowHiddenParams": {
+        "type": "boolean",
+        "default": false
+    },
+    "validate_params": {
+        "type": "boolean",
+        "default": true
+    }
+}
