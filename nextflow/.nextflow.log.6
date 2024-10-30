@@ -1,0 +1,97 @@
+Aug-28 17:06:32.732 [main] DEBUG nextflow.cli.Launcher - $> nextflow run workflow.nf -profile docker
+Aug-28 17:06:32.895 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 23.10.1
+Aug-28 17:06:32.925 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/Users/tgnguyen@dnanexus.com/.nextflow/plugins; core-plugins: nf-amazon@2.1.4,nf-azure@1.3.3,nf-cloudcache@0.3.0,nf-codecommit@0.1.5,nf-console@1.0.6,nf-ga4gh@1.1.0,nf-google@1.8.3,nf-tower@1.6.3,nf-wave@1.0.1
+Aug-28 17:06:32.942 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Aug-28 17:06:32.943 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Aug-28 17:06:32.948 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Aug-28 17:06:32.974 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Aug-28 17:06:33.022 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /Users/tgnguyen@dnanexus.com/Documents/personal_dev/nf-schema-formatter/nextflow/nextflow.config
+Aug-28 17:06:33.025 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /Users/tgnguyen@dnanexus.com/Documents/personal_dev/nf-schema-formatter/nextflow/nextflow.config
+Aug-28 17:06:33.118 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `docker`
+Aug-28 17:06:35.164 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [arm, docker]
+Aug-28 17:06:35.211 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declararion
+Aug-28 17:06:35.227 [main] INFO  nextflow.cli.CmdRun - Launching `workflow.nf` [silly_pesquet] DSL2 - revision: 0635391994
+Aug-28 17:06:35.228 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Aug-28 17:06:35.228 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Aug-28 17:06:35.241 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /Users/tgnguyen@dnanexus.com/.nextflow/secrets/store.json
+Aug-28 17:06:35.247 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@71b6172c] - activable => nextflow.secret.LocalSecretsProvider@71b6172c
+Aug-28 17:06:35.317 [main] DEBUG nextflow.Session - Session UUID: 05084d70-9718-4a02-b66a-7d5897410b17
+Aug-28 17:06:35.317 [main] DEBUG nextflow.Session - Run name: silly_pesquet
+Aug-28 17:06:35.318 [main] DEBUG nextflow.Session - Executor pool size: 10
+Aug-28 17:06:35.418 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Aug-28 17:06:35.445 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=30; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Aug-28 17:06:35.840 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 23.10.1 build 5891
+  Created: 12-01-2024 22:01 UTC (13-01-2024 05:01 ICST)
+  System: Mac OS X 14.6
+  Runtime: Groovy 3.0.19 on OpenJDK 64-Bit Server VM 11.0.22+7-LTS
+  Encoding: UTF-8 (UTF-8)
+  Process: 72261@tgnguyen-20508-rm-ltmp-x [192.168.88.46]
+  CPUs: 10 - Mem: 16 GB (18.1 MB) - Swap: 12 GB (942.9 MB)
+Aug-28 17:06:35.885 [main] DEBUG nextflow.Session - Work-dir: /Users/tgnguyen@dnanexus.com/Documents/personal_dev/nf-schema-formatter/nextflow/work [Mac OS X]
+Aug-28 17:06:35.915 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Aug-28 17:06:35.935 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Aug-28 17:06:36.008 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Aug-28 17:06:36.032 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 11; maxThreads: 1000
+Aug-28 17:06:36.116 [main] DEBUG nextflow.Session - Session start
+Aug-28 17:06:36.128 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow started -- trace file: /Users/tgnguyen@dnanexus.com/Documents/personal_dev/nf-schema-formatter/nextflow/result/pipeline_info/execution_trace_2024-08-28_17-06-35.txt
+Aug-28 17:06:36.438 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Aug-28 17:06:36.758 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Aug-28 17:06:36.758 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Aug-28 17:06:36.768 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Aug-28 17:06:36.773 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=10; memory=16 GB; capacity=10; pollInterval=100ms; dumpInterval=5m
+Aug-28 17:06:36.776 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Aug-28 17:06:37.003 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: SAMPLE_SHEET, SAMPLE_SHEET_VALIDATION:SAMPLE_SHEET
+Aug-28 17:06:37.005 [main] DEBUG nextflow.Session - Igniting dataflow network (4)
+Aug-28 17:06:37.029 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > SAMPLE_SHEET_VALIDATION:SAMPLE_SHEET
+Aug-28 17:06:37.035 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_fbf34e978dcc01e6: /Users/tgnguyen@dnanexus.com/Documents/personal_dev/nf-schema-formatter/nextflow/./subworkflows/sample_sheet_validation.nf
+  Script_6ef867054ba65e1e: /Users/tgnguyen@dnanexus.com/Documents/personal_dev/nf-schema-formatter/nextflow/./subworkflows/../modules/sample_sheet.nf
+  Script_08fa025256ba6f77: /Users/tgnguyen@dnanexus.com/Documents/personal_dev/nf-schema-formatter/nextflow/workflow.nf
+Aug-28 17:06:37.036 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Aug-28 17:06:37.036 [main] DEBUG nextflow.Session - Session await
+Aug-28 17:06:37.451 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-28 17:06:37.455 [Task submitter] INFO  nextflow.Session - [09/7a23c5] Submitted process > SAMPLE_SHEET_VALIDATION:SAMPLE_SHEET (sample_sheet null)
+Aug-28 17:06:42.597 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: SAMPLE_SHEET_VALIDATION:SAMPLE_SHEET (sample_sheet null); status: COMPLETED; exit: 125; error: -; workDir: /Users/tgnguyen@dnanexus.com/Documents/personal_dev/nf-schema-formatter/nextflow/work/09/7a23c5a0da3ec8422d218c7a982854]
+Aug-28 17:06:42.613 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=SAMPLE_SHEET_VALIDATION:SAMPLE_SHEET (sample_sheet null); work-dir=/Users/tgnguyen@dnanexus.com/Documents/personal_dev/nf-schema-formatter/nextflow/work/09/7a23c5a0da3ec8422d218c7a982854
+  error [nextflow.exception.ProcessFailedException]: Process `SAMPLE_SHEET_VALIDATION:SAMPLE_SHEET (sample_sheet null)` terminated with an error exit status (125)
+Aug-28 17:06:42.643 [Task monitor] ERROR nextflow.processor.TaskProcessor - Error executing process > 'SAMPLE_SHEET_VALIDATION:SAMPLE_SHEET (sample_sheet null)'
+
+Caused by:
+  Process `SAMPLE_SHEET_VALIDATION:SAMPLE_SHEET (sample_sheet null)` terminated with an error exit status (125)
+
+Command executed:
+
+  prepare_samplesheet.py conf/samplesheet_config.json data data/samplesheet.csv
+
+Command exit status:
+  125
+
+Command output:
+  (empty)
+
+Command error:
+  Unable to find image 'quay.io/python:3.9.19-slim' locally
+  docker: Error response from daemon: unknown: <!doctype html>
+  <html lang=en>
+  <title>404 Not Found</title>
+  <h1>Not Found</h1>
+  <p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>.
+  See 'docker run --help'.
+
+Work dir:
+  /Users/tgnguyen@dnanexus.com/Documents/personal_dev/nf-schema-formatter/nextflow/work/09/7a23c5a0da3ec8422d218c7a982854
+
+Tip: you can replicate the issue by changing to the process work dir and entering the command `bash .command.run`
+Aug-28 17:06:42.654 [main] DEBUG nextflow.Session - Session await > all processes finished
+Aug-28 17:06:42.689 [Task monitor] INFO  nextflow.Session - Execution cancelled -- Finishing pending tasks before exit
+Aug-28 17:06:42.729 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
+Aug-28 17:06:42.730 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Aug-28 17:06:42.743 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=0; failedCount=1; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=0ms; failedDuration=5s; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=1; peakCpus=1; peakMemory=0; ]
+Aug-28 17:06:42.743 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow completed -- saving trace file
+Aug-28 17:06:42.746 [main] DEBUG nextflow.trace.ReportObserver - Workflow completed -- rendering execution report
+Aug-28 17:06:43.603 [main] DEBUG nextflow.trace.TimelineObserver - Workflow completed -- rendering execution timeline
+Aug-28 17:06:44.050 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Aug-28 17:06:44.098 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'FileTransfer' shutdown completed (hard=false)
+Aug-28 17:06:44.099 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

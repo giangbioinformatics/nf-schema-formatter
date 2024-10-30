@@ -28,7 +28,7 @@ def extract_params_block(file_path):
 
 
 def parse_params_block(params_block):
-    params_dict = {}
+    params_dict = []
     lines = params_block.split("\n")
     for line in lines:
         param_dict = {}
@@ -36,6 +36,7 @@ def parse_params_block(params_block):
         if "=" in line:
             key, value = line.split("=", 1)
             key = key.strip()
+            param_dict["name"] = key
             value = value.strip().strip('"').strip("'")
             # boolean
             if value.lower() in ["true", "false"]:
@@ -49,14 +50,15 @@ def parse_params_block(params_block):
             elif re.match(r"^-?\d+(?:\.\d+)?$", value):
                 value = float(value)
                 param_dict["type"] = "float"
-            elif value == "null":
+            else:
                 param_dict["type"] = "string"
-                param_dict["required"] = "true"
+                param_dict["required"] = True
+
             # others
             if not param_dict.get("required"):
                 param_dict["default"] = value
-            params_dict[key] = param_dict
-
+            param_dict["help"] = ""
+        params_dict.append(param_dict)
     return params_dict
 
 
@@ -78,11 +80,15 @@ def format_params_to_json(file_path: str, outdir: str):
         os.makedirs(outdir)
 
     params_block = extract_params_block(file_path)
-    params_dict = parse_params_block(params_block)
+    params_dict = [param for param in parse_params_block(params_block) if param != {}]
+    params_dict = {
+        "name": "common",
+        "help": "Common paramters",
+        "params": params_dict,
+    }
     params_json = json.dumps(params_dict, indent=4)
 
     with open(os.path.join(outdir, "params.json"), "w") as json_file:
         json_file.write(params_json)
-    webbrowser.open(f"file://{os.path.abspath(outdir)}/params.json")
 
     logger.info(f"Parameters have been written to {outdir}/params.json")

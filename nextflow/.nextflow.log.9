@@ -1,0 +1,85 @@
+Aug-28 16:04:37.606 [main] DEBUG nextflow.cli.Launcher - $> nextflow run workflow.nf
+Aug-28 16:04:37.764 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 23.10.1
+Aug-28 16:04:37.821 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/Users/tgnguyen@dnanexus.com/.nextflow/plugins; core-plugins: nf-amazon@2.1.4,nf-azure@1.3.3,nf-cloudcache@0.3.0,nf-codecommit@0.1.5,nf-console@1.0.6,nf-ga4gh@1.1.0,nf-google@1.8.3,nf-tower@1.6.3,nf-wave@1.0.1
+Aug-28 16:04:37.839 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Aug-28 16:04:37.840 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Aug-28 16:04:37.845 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Aug-28 16:04:37.880 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Aug-28 16:04:37.929 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /Users/tgnguyen@dnanexus.com/Documents/personal_dev/nf-schema-formatter/nextflow/nextflow.config
+Aug-28 16:04:37.931 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /Users/tgnguyen@dnanexus.com/Documents/personal_dev/nf-schema-formatter/nextflow/nextflow.config
+Aug-28 16:04:37.978 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Aug-28 16:04:39.917 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declararion
+Aug-28 16:04:39.934 [main] INFO  nextflow.cli.CmdRun - Launching `workflow.nf` [stupefied_hopper] DSL2 - revision: 0635391994
+Aug-28 16:04:39.936 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Aug-28 16:04:39.936 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Aug-28 16:04:39.951 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /Users/tgnguyen@dnanexus.com/.nextflow/secrets/store.json
+Aug-28 16:04:39.957 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@3610f277] - activable => nextflow.secret.LocalSecretsProvider@3610f277
+Aug-28 16:04:40.040 [main] DEBUG nextflow.Session - Session UUID: 330b7945-fd80-4aa2-8b5a-6c3a238bfde4
+Aug-28 16:04:40.040 [main] DEBUG nextflow.Session - Run name: stupefied_hopper
+Aug-28 16:04:40.041 [main] DEBUG nextflow.Session - Executor pool size: 10
+Aug-28 16:04:40.050 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Aug-28 16:04:40.055 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=30; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Aug-28 16:04:40.474 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 23.10.1 build 5891
+  Created: 12-01-2024 22:01 UTC (13-01-2024 05:01 ICST)
+  System: Mac OS X 14.6
+  Runtime: Groovy 3.0.19 on OpenJDK 64-Bit Server VM 11.0.22+7-LTS
+  Encoding: UTF-8 (UTF-8)
+  Process: 70963@tgnguyen-20508-rm-ltmp-x [192.168.88.46]
+  CPUs: 10 - Mem: 16 GB (20.4 MB) - Swap: 12 GB (958.7 MB)
+Aug-28 16:04:40.551 [main] DEBUG nextflow.Session - Work-dir: /Users/tgnguyen@dnanexus.com/Documents/personal_dev/nf-schema-formatter/nextflow/work [Mac OS X]
+Aug-28 16:04:40.583 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Aug-28 16:04:40.600 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Aug-28 16:04:40.666 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Aug-28 16:04:40.687 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 11; maxThreads: 1000
+Aug-28 16:04:40.759 [main] DEBUG nextflow.Session - Session start
+Aug-28 16:04:40.767 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow started -- trace file: /Users/tgnguyen@dnanexus.com/Documents/personal_dev/nf-schema-formatter/nextflow/result/pipeline_info/execution_trace_2024-08-28_16-04-39.txt
+Aug-28 16:04:41.094 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Aug-28 16:04:41.215 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_2619236386678367: /Users/tgnguyen@dnanexus.com/Documents/personal_dev/nf-schema-formatter/nextflow/./subworkflows/sample_sheet_validation.nf
+  Script_08fa025256ba6f77: /Users/tgnguyen@dnanexus.com/Documents/personal_dev/nf-schema-formatter/nextflow/workflow.nf
+Aug-28 16:04:41.215 [main] DEBUG nextflow.Session - Session aborted -- Cause: Can't find a matching module file for include: ./modules/sample_sheet.nf
+Aug-28 16:04:41.276 [main] ERROR nextflow.cli.Launcher - Can't find a matching module file for include: ./modules/sample_sheet.nf
+java.nio.file.NoSuchFileException: Can't find a matching module file for include: ./modules/sample_sheet.nf
+	at nextflow.script.IncludeDef.realModulePath(IncludeDef.groovy:193)
+	at nextflow.script.IncludeDef.load0(IncludeDef.groovy:121)
+	at nextflow.script.IncludeDef$load0$1.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:139)
+	at Script_2619236386678367.runScript(Script_2619236386678367:1)
+	at nextflow.script.BaseScript.run0(BaseScript.groovy:144)
+	at nextflow.script.BaseScript.run(BaseScript.groovy:192)
+	at nextflow.script.ScriptParser.runScript(ScriptParser.groovy:236)
+	at nextflow.script.ScriptParser.runScript(ScriptParser.groovy:222)
+	at nextflow.script.IncludeDef.memoizedMethodPriv$loadModule0PathMapSession(IncludeDef.groovy:151)
+	at nextflow.script.IncludeDef.access$0(IncludeDef.groovy)
+	at nextflow.script.IncludeDef$__clinit__closure2.doCall(IncludeDef.groovy)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:274)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1030)
+	at groovy.lang.Closure.call(Closure.java:427)
+	at org.codehaus.groovy.runtime.memoize.Memoize$MemoizeFunction.lambda$call$0(Memoize.java:137)
+	at org.codehaus.groovy.runtime.memoize.ConcurrentCommonCache.getAndPut(ConcurrentCommonCache.java:137)
+	at org.codehaus.groovy.runtime.memoize.ConcurrentCommonCache.getAndPut(ConcurrentCommonCache.java:113)
+	at org.codehaus.groovy.runtime.memoize.Memoize$MemoizeFunction.call(Memoize.java:136)
+	at nextflow.script.IncludeDef.loadModule0(IncludeDef.groovy)
+	at nextflow.script.IncludeDef.load0(IncludeDef.groovy:123)
+	at nextflow.script.IncludeDef$load0$1.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:139)
+	at Script_08fa025256ba6f77.runScript(Script_08fa025256ba6f77:4)
+	at nextflow.script.BaseScript.run0(BaseScript.groovy:144)
+	at nextflow.script.BaseScript.run(BaseScript.groovy:192)
+	at nextflow.script.ScriptParser.runScript(ScriptParser.groovy:236)
+	at nextflow.script.ScriptRunner.run(ScriptRunner.groovy:242)
+	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:137)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:372)
+	at nextflow.cli.Launcher.run(Launcher.groovy:500)
+	at nextflow.cli.Launcher.main(Launcher.groovy:672)

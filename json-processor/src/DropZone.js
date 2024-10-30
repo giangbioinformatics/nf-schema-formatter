@@ -5,7 +5,7 @@ import DragItem from "./DragItem";
 
 const ItemType = "ITEM";
 
-const DropZone = ({ group, onDrop, handleParamChange }) => {
+const DropZone = ({ group, onDrop, handleParamChange, handleSelectParam }) => {
 	const [, drop] = useDrop(
 		() => ({
 			accept: ItemType,
@@ -34,6 +34,7 @@ const DropZone = ({ group, onDrop, handleParamChange }) => {
 						handleParamChange={(index, field, event) =>
 							handleParamChange(index, field, event)
 						}
+						handleSelectParam={handleSelectParam}
 					/>
 				))
 			) : (

@@ -1,0 +1,11 @@
+{
+  "sample": {
+    "type": "group",
+    "param":
+    {
+        "fastq_1" : "file" ,
+        "fastq_2" : "file" ,
+        "strandedness" : "string"
+    }
+  }
+}
